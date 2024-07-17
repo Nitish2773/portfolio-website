@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <p>Details about projects.</p>
+
+        <div class="category-section">
+            <h3>HTML-CSS Projects</h3>
+            <div class="row">
+                {% for project in html_projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{{ project.link }}" class="btn btn-primary">View Project</a>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-sm btn-info">Edit</a>
+                            <a href="{% url 'project-delete' project.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="category-section">
+            <h3>JavaScript Projects</h3>
+            <div class="row">
+                {% for project in javascript_projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{{ project.link }}" class="btn btn-primary">View Project</a>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-sm btn-info">Edit</a>
+                            <a href="{% url 'project-delete' project.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3>React Projects</h3>
+            <div class="row">
+                {% for project in react_projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{{ project.link }}" class="btn btn-primary">View Project</a>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-sm btn-info">Edit</a>
+                            <a href="{% url 'project-delete' project.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3>Node.js Projects</h3>
+            <div class="row">
+                {% for project in nodejs_projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{{ project.link }}" class="btn btn-primary">View Project</a>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-sm btn-info">Edit</a>
+                            <a href="{% url 'project-delete' project.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3>Django Projects</h3>
+            <div class="row">
+                {% for project in django_projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{{ project.link }}" class="btn btn-primary">View Project</a>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-sm btn-info">Edit</a>
+                            <a href="{% url 'project-delete' project.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="{% url 'project-add' %}" class="btn btn-primary mb-3">Add New Project</a>
+    </div>
+</section>
+{% endblock %}

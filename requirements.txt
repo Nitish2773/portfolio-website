@@ -1,0 +1,4 @@
+Python>=3.12
+Django>=3.2,<4.0
+djangorestframework>=3.12
+Pillow>=8.0

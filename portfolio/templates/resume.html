@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<section class="resume">
+    <h2>Resume</h2>
+    
+    <!-- Button to show the form -->
+    <div class="text-center" id="add-resume-button">
+        <button class="btn btn-primary" onclick="showForm()">Add Resume</button>
+    </div>
+
+    <!-- Form to upload resume, initially hidden -->
+    <div id="upload-form" style="display: none;">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+
+    <h3>My Resume</h3>
+    <ul>
+        {% for document in documents %}
+        <li>
+            <a href="{{ document.file.url }}" download>{{ document.title }}</a> (Uploaded on: {{ document.uploaded_at }})
+            <form action="{% url 'delete_document' document.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<script>
+    function showForm() {
+        document.getElementById('add-resume-button').style.display = 'none';
+        document.getElementById('upload-form').style.display = 'block';
+    }
+</script>
+{% endblock %}

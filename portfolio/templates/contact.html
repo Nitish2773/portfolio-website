@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <h2>Contact</h2>
+    <div class="contact-details">
+        <p><img src="{% static 'images/phone.png' %}" alt="Phone"  class="img-fluid mr-3" style="max-width: 50px;"> +918008615514</p>
+        <p><img src="{% static 'images/mail.png' %}" alt="Email"  class="img-fluid mr-3" style="max-width: 50px;"> <a href="mailto:nitishkamisetti123@gmail.com">nitishkamisetti123@gmail.com</a></p>
+        <p><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"  class="img-fluid mr-3" style="max-width: 50px;"> <a href="https://www.linkedin.com/in/sri-nitish-kamisetti/" target="_blank">LinkedIn</a></p>
+        <p><img src="{% static 'images/github.jpeg' %}" alt="GitHub"  class="img-fluid mr-3" style="max-width: 50px;"> <a href="https://github.com/Nitish2773" target="_blank">GitHub</a></p>
+    </div>
+
+    <h3>Feedback Form</h3>
+    <button id="show-form-button" class="btn btn-primary">Provide Feedback</button>
+    <form id="feedback-form" method="post" style="display: none;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" id="cancel-form-button" class="btn btn-secondary">Cancel</button>
+    </form>
+
+    {% if messages %}
+    <div class="mt-3">
+        {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>
+
+<script>
+    document.getElementById('show-form-button').addEventListener('click', function() {
+        var form = document.getElementById('feedback-form');
+        form.style.display = 'block';
+        this.style.display = 'none';
+    });
+
+    document.getElementById('cancel-form-button').addEventListener('click', function() {
+        var form = document.getElementById('feedback-form');
+        form.style.display = 'none';
+        document.getElementById('show-form-button').style.display = 'block';
+    });
+</script>
+{% endblock %}

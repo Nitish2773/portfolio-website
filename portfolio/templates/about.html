@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<section class="about">
+    <h2>About Me</h2>
+    <div class="row">
+        <div class="col-lg-12 col-md-12" >
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title">Education</h3>
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/giet.jpg' %}" alt="GIET Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">GIET College of Engineering</h5>
+                                <p class="card-text">Bachelor of Technology - BTech, Computer Science</p>
+                                <p class="card-text">Dec 2021 - Jan 2025</p>
+                                <p class="card-text">Skills: CSS · Python · HTML5 · Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white;">
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/nxtwave.jpeg' %}" alt="NxtWave Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">NxtWave's CCBP 4.0 Academy</h5>
+                                <p class="card-text">Fellow - Full Stack Development, 4.0 Technologies</p>
+                                <p class="card-text">Sep 2021 - Jan 2025</p>
+                                <p class="card-text">Skills: CSS · Python · SQLite · HTML5 · JavaScript · AWS · React.js · Cybersecurity · AI · Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white;">
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/srichaitanya.jpeg' %}" alt="Sri Chaitanya Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">Sri Chaitanya Junior College</h5>
+                                <p class="card-text">Intermediate, MPC (Mathematics, Physics, Chemistry)</p>
+                                <p class="card-text">Jun 2019 - Aug 2021</p>
+                                <p class="card-text">Grade: 95.1%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white;">
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/aditya.jpeg' %}" alt="Aditya Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">Aditya Educational Institutions</h5>
+                                <p class="card-text">SSC Higher Secondary Education</p>
+                                <p class="card-text">Mar 2016 - Mar 2019</p>
+                                <p class="card-text">Grade: 10 GPA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title">Internships</h3>
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/blackbucks.jpeg' %}" alt="Blackbucks Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">Blackbucks Group</h5>
+                                <p class="card-text">Full-stack Developer Internship</p>
+                                <p class="card-text">May 2024 - Present</p>
+                                <p class="card-text">Location: Vijayawada, Andhra Pradesh, India · Remote</p>
+                                <p class="card-text">Skills: HTML5 · CSS · JavaScript · React.js · Node.js · SQLite · Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white;">
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/aimerslogo.jpeg' %}" alt="AIMERS Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">AIMER Society</h5>
+                                <p class="card-text">Artificial Intelligence and Cybersecurity Internship</p>
+                                <p class="card-text">May 2024 - Jul 2024</p>
+                                <p class="card-text">Location: Telangana, India · Remote</p>
+                                <p class="card-text">Skills: Cybersecurity · AI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white;">
+                    <div class="experience-item">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/apssdc.jpeg' %}" alt="APSSDC Logo" class="img-fluid mr-3" style="max-width: 100px;">
+                            <div>
+                                <h5 class="card-subtitle mb-2">APSSDC</h5>
+                                <p class="card-text">Django Framework Using Python Internship</p>
+                                <p class="card-text">May 2023 - Jul 2023</p>
+                                <p class="card-text">Location: Andhra Pradesh, India · Remote</p>
+                                <p class="card-text">Skills: Python · CSS · HTML5 · Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title">Personal Details</h3>
+                    <div class="experience-item">
+                        <p class="card-text"><strong>Role:</strong> Full Stack Developer</p>
+                        <p class="card-text"><strong>Studying at:</strong> Godavari Institute of Engineering and Technology (GIET)</p>
+                        <p class="card-text"><strong>Hobbies:</strong> Watching Movies, Browsing Social Media, Playing Games</p>
+                        <p class="card-text"><strong>Achievements:</strong> Mention notable achievements here</p>
+                        <p class="card-text"><strong>Description:</strong> Greetings 😊, my name is Sri Nitish. I am currently pursuing a B.Tech degree in Computer Science at Godavari Institute of Engineering And Technology, Rajahmundry. I am an independent Full Stack Developer Trainee. I am eager to acquire challenging positions within the field of computer engineering. At NxtWave’s CCBP 4.0 Academy, I’m currently learning full-stack development in 4.0 technologies. In love with the coding challenges and hands-on projects. With Industry’s first-ever IRC 4.0, getting ready to take on new challenges in the tech world. I am an aspiring Techie. I have a passionate and dedicated Developer enthusiastic believe in learning. I am confident that I can make an instant impact in engineering roles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

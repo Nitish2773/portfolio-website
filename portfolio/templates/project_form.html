@@ -1,0 +1,32 @@
+<!-- project_form.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if form.instance.pk %}
+        Update Project - {{ form.instance.name }}
+    {% else %}
+        Add New Project
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="project-form">
+    <div class="container">
+        <h2>
+            {% if form.instance.pk %}
+                Update Project - {{ form.instance.name }}
+            {% else %}
+                Add New Project
+            {% endif %}
+        </h2>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="{% url 'projects-list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</section>
+{% endblock %}

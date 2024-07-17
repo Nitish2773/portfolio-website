@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Portfolio{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/portfolio.png' %}">
+</head>
+<body style="background-color: aliceblue;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="{% url 'home' %}">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'skills-list' %}">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'projects-list' %}">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4 ">
+        {% block content %}
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to My Portfolio</h1>
+            <p class="lead">I am a Full Stack Developer.</p>
+            <div class="row profile-pic-container">
+                <div class="col-md-4 ">
+                    <img src="{% static 'images/profile2.jpg' %}" class="img-fluid profile-pic"  alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+        
+        
+        {% endblock %}
+    </main>
+    <footer class="bg-dark text-white text-center py-3 mt-3">
+        <p>&copy; Kamisetti Sri Nitish</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

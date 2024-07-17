@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+header {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.education-item,
+.internship-item {
+    margin-bottom: 20px;
+}
+
+.education-item img,
+.internship-item img {
+    margin-right: 10px;
+}
+
+.education-item span,
+.internship-item span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.about h3 {
+    margin-top: 30px;
+}
+
+#add-resume-button {
+    margin-top: 20px;
+}
+
+#upload-form {
+    margin-top: 20px;
+}
+
