@@ -70,4 +70,5 @@ This is a personal portfolio website built using Django. The website includes th
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+##Screenshots
 
