@@ -67,12 +67,6 @@ This is a personal portfolio website built using Django. The website includes th
 ## Usage
 - Navigate to the Django admin panel at `http://127.0.0.1:8000/admin` to manage your portfolio content.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-
-
-
-https://github.com/user-attachments/assets/9ebe2a3a-3f36-4a1c-ac45-d96e1b85670d
-
+https://github.com/user-attachments/assets/c7ef5833-99ef-4a09-b0b6-1514bb837380
 
